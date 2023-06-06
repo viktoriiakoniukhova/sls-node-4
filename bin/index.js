@@ -6,12 +6,16 @@ const INT_3 = 3;
 const INT_6 = 6;
 
 let intervalId, prevIntValue;
-
+let forecast = "";
 //BOT setup
 
 const token = process.env.BOT_TOKEN;
 
 const bot = new TelegramBot(token, { polling: true });
+
+bot.onText(/\/start/, () => {
+  fetchForecast();
+});
 
 bot.onText(/\/(start|getwf)/, (msg) => {
   const chatId = msg.chat.id;
@@ -62,9 +66,6 @@ bot.on("callback_query", (query) => {
 //OpenWeather
 const coords = { lat: 48.469010256785616, lng: 35.03330292211286 };
 const url = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${coords.lat}&lon=${coords.lng}&appid=${process.env.OW_API_KEY}&lang=uk`;
-
-let forecast = "";
-fetchForecast();
 
 function startInterval(intValue) {
   const isIntervalChanged =
