@@ -9,8 +9,7 @@
     "start-linux": "export $(cat .env | xargs) && npm start",
     "start-windows": "(for /F \"tokens=*\" %i in (.env) do set %i) && npm start"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Viktoriia Koniukhova",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
