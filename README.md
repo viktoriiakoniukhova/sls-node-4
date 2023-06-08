@@ -8,6 +8,7 @@ TELEGRAM BOT: WEATHER FORECAST
 
 **2. Subscribe for weather forecast notifications every N hours.**
 
+
 Prerequisites: Node.js, npm installed.
 
 To run script:
