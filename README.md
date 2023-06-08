@@ -5,6 +5,7 @@ TELEGRAM BOT: WEATHER FORECAST
 **Functionality:**
 
 **1. Get weather forecast in Dnipro (with 3/6 hours interval)**
+
 **2. Subscribe for weather forecast notifications every N hours.**
 
 Prerequisites: Node.js, npm installed.
